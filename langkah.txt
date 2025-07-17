@@ -1,0 +1,21 @@
+# Install Ollama (di Linux/Mac/WSL)
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Jalankan server
+ollama serve
+
+# Unduh dan jalankan model
+ollama run llama3
+
+
+python3 -m venv venv
+source venv/bin/activate
+
+pip install fastapi uvicorn requests
+
+uvicorn app:app --reload
+
+http://localhost:8000/docs
+
+
+
