@@ -5,17 +5,18 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama serve
 
 # Unduh dan jalankan model
-ollama run llama3
+ollama run gemma:2b
 
 
 python3 -m venv venv
 source venv/bin/activate
 
-pip install fastapi uvicorn requests
+# Install Flask
+pip install -r requirements.txt
 
-uvicorn app:app --reload
-
-http://localhost:8000/docs
+# Jalankan aplikasi
+python app.py
+Buka browser ke http://localhost:5000
 
 
 
